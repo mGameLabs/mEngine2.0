@@ -1,8 +1,6 @@
 package com.mgamelabs.mengine.graphics;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Class description.
@@ -11,7 +9,11 @@ import java.util.List;
  */
 public class GraphicsController {
 
-    private static List<Window> windows = new LinkedList<>();
+    private static List<Window> windows;
+
+    static {
+        windows = Collections.synchronizedList(new ArrayList<>());
+    }
 
     public static void addWindow(String title, int width, int height) {
         windows.add(new Window(title, width, height));

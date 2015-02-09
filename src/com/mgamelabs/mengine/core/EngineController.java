@@ -1,7 +1,10 @@
 package com.mgamelabs.mengine.core;
 
+import com.mgamelabs.mengine.graphics.GraphicsController;
 import com.mgamelabs.mengine.util.Preferences;
 import com.mgamelabs.mengine.util.Resources;
+
+import java.util.Collections;
 
 /**
  * Class description.
@@ -14,4 +17,13 @@ public class EngineController {
         Preferences.setProperties(Resources.getProperties("data/mengine.properties"));
     }
 
+    public static void run() {
+        ThreadController.startThread(() -> {
+            while (true) GraphicsController.refresh();
+        }, "mng-graphics");
+    }
+
+    public static void stop() {
+        ThreadController.stopThreads();
+    }
 }

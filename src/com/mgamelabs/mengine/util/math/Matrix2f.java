@@ -22,7 +22,7 @@ public class Matrix2f {
 
     }
 
-    public Matrix2f(Matrix3f clone) {
+    public Matrix2f(Matrix2f clone) {
 
         this.matrix = clone.matrix;
 

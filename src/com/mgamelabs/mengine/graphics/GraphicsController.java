@@ -21,6 +21,14 @@ public class GraphicsController {
         add.add(new WindowData(title, width, height));
     }
 
+    public static Window getWindow(int index) {
+        return windows.get(index);
+    }
+
+    public static Window getWindow(long id) {
+        return windows.stream().filter(w -> w.getId() == id).findAny().get();
+    }
+
     public static void refresh() {
         if (!add.isEmpty()) {
             add.forEach(w -> windows.add(new Window(w.title, w.width, w.height)));
@@ -36,7 +44,6 @@ public class GraphicsController {
             else win.refresh();
         }
     }
-
 }
 
 class WindowData {

@@ -5,5 +5,8 @@ package com.mgamelabs.mengine.entities.modules;
  *
  * @author Maxi Schmeller (mtronics_dev)
  */
-public class Module {
+public abstract class Module {
+
+
+
 }

@@ -20,6 +20,12 @@ public class Entity {
         this.modules = new ArrayList<>(Arrays.asList(modules));
     }
 
+    public void addModule(Module module) {
+
+        modules.add(module);
+
+    }
+
     public <M extends Module> List<M> getModules(Class<M> type) {
         //noinspection unchecked
         return (List<M>) modules.stream().filter(type::isInstance);

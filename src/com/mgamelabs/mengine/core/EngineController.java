@@ -4,8 +4,6 @@ import com.mgamelabs.mengine.graphics.GraphicsController;
 import com.mgamelabs.mengine.util.Preferences;
 import com.mgamelabs.mengine.util.Resources;
 
-import java.util.Collections;
-
 /**
  * Class description.
  *

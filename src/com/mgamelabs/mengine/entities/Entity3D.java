@@ -1,6 +1,6 @@
 package com.mgamelabs.mengine.entities;
 
-import com.mgamelabs.mengine.math.Vector3f;
+import com.mgamelabs.mengine.util.math.Vector3f;
 
 /**
  * Class description.

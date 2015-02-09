@@ -1,4 +1,4 @@
-package com.mgamelabs.mengine.math;
+package com.mgamelabs.mengine.util.math;
 
 /**
  * Class description.
@@ -54,7 +54,7 @@ public class Vector3f {
     }
 
     public float length() {
-        return (float) Math.sqrt(x*x + y*y + z*z);
+        return (float) Math.sqrt(dot(this));
     }
 
     public void normalize() {

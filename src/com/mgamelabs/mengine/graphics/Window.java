@@ -24,7 +24,7 @@ public class Window {
     private long id;
     private float[] backgroundColor;
 
-    public Window(String title, int width, int height) {
+    Window(String title, int width, int height) {
         glfwSetErrorCallback(errorCallbackPrint(System.err));
 
         if (glfwInit() != GL_TRUE)
@@ -64,6 +64,14 @@ public class Window {
                 (float) color.getAlpha() / 255};
 
         glClearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], backgroundColor[3]);
+    }
+
+    public boolean shouldClose() {
+        return glfwWindowShouldClose(id) == GL_TRUE;
+    }
+
+    public void close() {
+        glfwDestroyWindow(id);
     }
 
     public long getId() {
